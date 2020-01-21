@@ -21,6 +21,7 @@
             <i class="icofont-runner-alt-1 ml-2"></i>
         </div>
         <div class="card-body">
+            <?= include(VIEW_PATH . '/template/messages.php')?>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email"

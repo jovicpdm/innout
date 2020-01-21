@@ -1,24 +1,14 @@
-<?php
-if ($exception) {
+<?php 
+if($exception){
     $message = [
         'type' => 'error',
         'message' => $exception->getMessage()
     ];
 }
-
-$alertType = '';
-
-if ($message['type'] === 'error') {
-    $alertType = 'danger';
-} else {
-    $alertType = 'success';
-}
-
 ?>
 
-<?php if ($message): ?>
-<div role="alert"
-        class="my-3 alert alert-<?= $alertType ?>">
+<?php if($message): ?>
+<div class="my-3 alert alert-danger" role="alert">
     <?= $message['message'] ?>
 </div>
 <?php endif ?>
