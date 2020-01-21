@@ -6,8 +6,8 @@ if(count($_POST) > 0) {
     try {
         $user =$login->checkLogin();
         echo "Usuário {$user->name} logado";
-    } catch (Exception $e){
-        echo "Falha no Login :(";
+    } catch (AppException $e){
+        echo $e->getMessage();
     }
 }
 
