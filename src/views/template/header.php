@@ -19,4 +19,7 @@
             <span class="font-weight-light">Out</span>
             <i class="icofont-runner-alt-1 ml-2"></i>
         </div>
+        <div class="menu-toggle mx-3">
+            <i class="icofont-navigation-menu"></i>
+        </div>
     </header>
