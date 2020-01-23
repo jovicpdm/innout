@@ -5,7 +5,7 @@ body {
     grid-template-areas: 
         "header header"
         "sidebar content"
-        "sidebar footer";
+        "footer footer";
     height: 100vh;
     margin: 0;
     background-color: #DDD;
@@ -145,5 +145,12 @@ main.content{
 }
 
 footer.footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    font-size: 1.2rem;
+    background-color: #222;
+    color: #fff;
     grid-area: footer;
 }
