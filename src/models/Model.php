@@ -73,7 +73,7 @@ class Model{
         }
         $sql[strlen($sql) - 1]  = ' ';
         $sql .= "where id = {$this->id}";
-        Database::executeSQL($sql]);
+        Database::executeSQL($sql);
     }
 
     private static function getFilters($filters){
