@@ -36,7 +36,7 @@
             <i class="icon icofont-hour-glass text-primary"></i>
             <div class="info">
                 <span class="main text-primary">
-                    04.23
+                    <?= $workingInterval ?>
                 </span>
                 <span class="label text-muted">Horas Trabalhadas</span>
             </div>
@@ -46,7 +46,7 @@
             <i class="icon icofont-ui-alarm text-danger"></i>
             <div class="info">
                 <span class="main text-danger">
-                    18.00
+                    <?= $exitTime ?>
                 </span>
                 <span class="label text-muted">Hora de Saída</span>
             </div>
