@@ -98,7 +98,18 @@ class WorkingHours extends Model{
         }
     }
 
-    function getTimes() {
+    public static function getMonthlyReport($userId, $date){
+        $registries = [];
+        $startDate = getFirstDayOfMonth($date)->format('Y-m-d');
+        $endDate = getLastDayOfMonth($date)->format('Y-m-d');
+
+        $result = static::getResultSetFromSelect([
+            'user_id' => $userId,
+            'raw' => "work_date betwenn '{$startDate}' and '{$endDate}'"
+        ]);
+    }
+
+    private function getTimes() {
         $times = [];
 
         $this->time1 ? array_push($times, getDateFromString($this->time1)) : array_push($times, null);
