@@ -52,6 +52,7 @@ class WorkingHours extends Model{
             throw new AppException("Você já fez os 4 batimentos do dia!");
         }
         $this->$timeColumn = $time;
+        $this->worked_time = $this->getSecondsFromDateInterval($this->getWorkedInterval());
         if($this->id) {
             $this->update();
         } else {
@@ -105,8 +106,16 @@ class WorkingHours extends Model{
 
         $result = static::getResultSetFromSelect([
             'user_id' => $userId,
-            'raw' => "work_date betwenn '{$startDate}' and '{$endDate}'"
+            'raw' => "work_date between '{$startDate}' and '{$endDate}'"
         ]);
+
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $registries[$row['work_date']] = new WorkingHours($row);
+            }
+        }
+
+        return $registries;
     }
 
     private function getTimes() {
@@ -118,5 +127,11 @@ class WorkingHours extends Model{
         $this->time4 ? array_push($times, getDateFromString($this->time4)) : array_push($times, null);
 
         return $times;
+    }
+
+    function getSecondsFromDateInterval($interval){
+        $d1 = new DateTimeImmutable;
+        $d2 = $d1->add($interval);
+        return $d2->getTimestamp() - $d1->getTimestamp();
     }
 }
