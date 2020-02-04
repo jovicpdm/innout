@@ -113,6 +113,30 @@ class WorkingHours extends Model{
         return "{$sign}{$balanceString}";
     }
 
+    public static function getAbsentUsers() {
+        $today = new DateTime();
+        $result = Database::getResultFromQuery(
+            "select name from users
+                where end_date is null 
+                and id not in(
+                    select user_id from working_hours
+                    where work_date = '{$today->format('Y-m-d')}'
+                    and time1 is not null 
+                )
+            ");
+
+        $absentUsers = [];
+        if ($result->num_rows > 0){
+            while ($row = $result->fetch_assoc()) {
+                array_push($absentUsers, $row['name']);
+            }
+        }
+
+        return $absentUsers;
+    }
+
+    
+
     public static function getMonthlyReport($userId, $date){
         $registries = [];
         $startDate = getFirstDayOfMonth($date)->format('Y-m-d');
