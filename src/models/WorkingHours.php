@@ -99,6 +99,20 @@ class WorkingHours extends Model{
         }
     }
 
+    function getBalance() {
+        if (!$this->worked_time1 && !isPastWorkday($this->work_date)) return '-';
+
+        $balance = $this->worked_time - DAILY_TIME;
+        $balanceString = getTimeStringFromSeconds(abs($balance));
+        $sign = '';
+        if ($this->worked_time > DAILY_TIME){
+            $sign = '+';
+        } elseif ($this->worked_time < DAILY_TIME){
+            $sign = '-';
+        }
+        return "{$sign}{$balanceString}";
+    }
+
     public static function getMonthlyReport($userId, $date){
         $registries = [];
         $startDate = getFirstDayOfMonth($date)->format('Y-m-d');

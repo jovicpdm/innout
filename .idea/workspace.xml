@@ -5,6 +5,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/date_utils.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/date_utils.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/monthly_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/monthly_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/WorkingHours.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WorkingHours.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/monthly_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/monthly_report.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +85,8 @@
       <workItem from="1580300997710" duration="7233000" />
       <workItem from="1580383983851" duration="8539000" />
       <workItem from="1580750367124" duration="4007000" />
-      <workItem from="1580755508349" duration="5264000" />
+      <workItem from="1580755508349" duration="5511000" />
+      <workItem from="1580815631746" duration="3222000" />
     </task>
     <servers />
   </component>

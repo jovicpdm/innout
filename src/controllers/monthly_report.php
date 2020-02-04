@@ -5,6 +5,10 @@ requireValidSession();
 $currentDate = new DateTime();
 
 $user = $_SESSION['user'];
+
+
+
+
 $registries = WorkingHours::getMonthlyReport($user->id, new DateTime());
 
 $report = [];
@@ -35,6 +39,6 @@ $sign = ($sumOfWorkedTime >= $expectedTime) ? '+' : '-';
 
 loadTemplateView('monthly_report', [
     'report' => $report,
-    'sumOfWorkedTime' => $sumOfWorkedTime,
-    'balance' =>
+    'sumOfWorkedTime' => getTimeStringFromSeconds($sumOfWorkedTime),
+    'balance' => "{$sign}{$balance}"
 ]);
