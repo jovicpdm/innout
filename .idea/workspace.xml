@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="88f01882-eeb8-494e-96e2-ad83b3ede213" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/template.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/manager_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/manager_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/WorkingHours.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WorkingHours.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/manager_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/manager_report.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +87,9 @@
       <workItem from="1580383983851" duration="8539000" />
       <workItem from="1580750367124" duration="4007000" />
       <workItem from="1580755508349" duration="5511000" />
-      <workItem from="1580815631746" duration="9347000" />
+      <workItem from="1580815631746" duration="9575000" />
+      <workItem from="1580901635437" duration="20000" />
+      <workItem from="1580901674477" duration="3743000" />
     </task>
     <servers />
   </component>
@@ -99,6 +105,10 @@
       <screen x="0" y="23" width="1920" height="978" />
     </state>
     <state x="1118" y="311" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1920.978@0.23.1920.978" timestamp="1579545893653" />
+    <state x="1084" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580901655409">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="1084" y="246" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1920.978@0.23.1920.978" timestamp="1580901655409" />
     <state x="988" y="123" width="832" height="757" key="DiffContextDialog" timestamp="1580304936454">
       <screen x="0" y="23" width="1920" height="978" />
     </state>
