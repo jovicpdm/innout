@@ -7,19 +7,19 @@
 
     <div class="summary-boxes">
         <div class="summary-box bg-primary">
-            <i class="icofont-users">
+            <i class="icon icofont-users">
                 <p class="title">Qtde de Funcionários</p>
                 <h3 class="value"><?= $activeUsersCount ?></h3>
             </i>
         </div>
         <div class="summary-box bg-danger">
-            <i class="icofont-patient-bed">
+            <i class="icon icofont-patient-bed">
                 <p class="title">Faltas</p>
                 <h3 class="value"><?= count($absentUsers) ?></h3>
             </i>
         </div>
         <div class="summary-box bg-success">
-            <i class="icofont-sand-clock">
+            <i class="icon icofont-sand-clock">
                 <p class="title">Horas no mês</p>
                 <h3 class="value"><?= $hoursInMonth ?></h3>
             </i>

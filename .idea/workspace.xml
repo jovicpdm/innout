@@ -2,12 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88f01882-eeb8-494e-96e2-ad83b3ede213" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/controllers/save_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/controllers/users.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/save_user.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/views/users.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/assets/css/template.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/css/template.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/manager_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/manager_report.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/WorkingHours.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/WorkingHours.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/manager_report.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/manager_report.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/template/left.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/template/left.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/template/title.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/template/title.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +49,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/exceptions" />
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/views" />
     </key>
   </component>
   <component name="ServiceViewManager">
@@ -89,7 +92,7 @@
       <workItem from="1580755508349" duration="5511000" />
       <workItem from="1580815631746" duration="9575000" />
       <workItem from="1580901635437" duration="20000" />
-      <workItem from="1580901674477" duration="3743000" />
+      <workItem from="1580901674477" duration="7691000" />
     </task>
     <servers />
   </component>
@@ -113,17 +116,25 @@
       <screen x="0" y="23" width="1920" height="978" />
     </state>
     <state x="988" y="123" width="832" height="757" key="DiffContextDialog/0.23.1920.978@0.23.1920.978" timestamp="1580304936454" />
-    <state x="1268" y="432" key="NewPhpFileDialog" timestamp="1580384677949">
+    <state x="1268" y="432" key="NewPhpFileDialog" timestamp="1580912049743">
       <screen x="0" y="23" width="1920" height="978" />
     </state>
-    <state x="1268" y="432" key="NewPhpFileDialog/0.23.1920.978@0.23.1920.978" timestamp="1580384677949" />
+    <state x="1268" y="432" key="NewPhpFileDialog/0.23.1920.978@0.23.1920.978" timestamp="1580912049743" />
     <state x="938" y="140" key="SettingsEditor" timestamp="1580393719380">
       <screen x="0" y="23" width="1920" height="978" />
     </state>
     <state x="938" y="140" key="SettingsEditor/0.23.1920.978@0.23.1920.978" timestamp="1580393719380" />
-    <state x="1061" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1580819945680">
+    <state x="986" y="236" width="820" height="550" key="find.popup" timestamp="1580908591341">
       <screen x="0" y="23" width="1920" height="978" />
     </state>
-    <state x="1061" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1920.978@0.23.1920.978" timestamp="1580819945680" />
+    <state x="986" y="236" width="820" height="550" key="find.popup/0.23.1920.978@0.23.1920.978" timestamp="1580908591341" />
+    <state x="1046" y="235" width="700" height="530" key="recent.locations.popup" timestamp="1580908407490">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="1046" y="235" width="700" height="530" key="recent.locations.popup/0.23.1920.978@0.23.1920.978" timestamp="1580908407490" />
+    <state x="1061" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1580912157123">
+      <screen x="0" y="23" width="1920" height="978" />
+    </state>
+    <state x="1061" y="233" width="670" height="676" key="search.everywhere.popup/0.23.1920.978@0.23.1920.978" timestamp="1580912157123" />
   </component>
 </project>

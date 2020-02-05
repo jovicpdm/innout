@@ -230,6 +230,7 @@ footer.footer{
 .summary-boxes {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .summary-box {
@@ -237,7 +238,21 @@ footer.footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #fff;
+    padding: 10px;
     border-radius: 10px;
-    margin: 0px 5px;
+    margin: 10px;
+    min-width: 200px;
+}
 
+.summary-box .icon {
+    font-size: 3.5rem;
+}
+
+.summary-box .title {
+    font-size: 1.5rem;
+}
+
+.summary-box .value {
+    font-size: 2rem;
 }
