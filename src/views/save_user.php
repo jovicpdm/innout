@@ -22,7 +22,7 @@
             </div>
             <div class="form-group col-md-6">
                 <label for="email">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Informe o E-mail"
+                <input type="email" id="email" name="email" placeholder="Informe o E-mail"
                 class="form-control <?= $errors['email'] ? 'is-invalid' : '' ?>"
                        value="<?= $email ?>">
                 <div class="invalid-feedback">

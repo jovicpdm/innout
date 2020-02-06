@@ -14,4 +14,56 @@ class User extends Model {
     public static function getActiveUsersCount() {
         return static::getCount(['raw' => 'end_date is null']);
     }
+
+    public function insert(){
+        $this->validate();
+        $this->is_admin = $this->is_admin ? 1 : 0;
+        if (!$this->end_date) $this->end_date = null;
+        parent::insert();
+    }
+
+    private function validate() {
+        $errors = [];
+        $padrao = "é um campo obrigatório";
+
+        if (!$this->name) {
+            $errors['name'] = "Nome $padrao";
+        }
+
+        if (!$this->email) {
+            $errors['email'] = "E-mail $padrao";
+        } elseif (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            $errors['email'] = "E-mail inválido";        }
+
+        if(!$this->start_date){
+            $errors['start_date'] = "Data de admissão $padrao";
+        } elseif(!DateTime::createFromFormat('Y-m-d', $this->start_date)) {
+            $errors['start_date'] = "Data de admissão deve seguir o padrão dd/mm/aaaa";
+        }
+
+        if($this->end_date && !DateTime::createFromFormat('Y-m-d', $this->start_date)) {
+            $errors['end_date'] = "Data de admissão deve seguir o padrão dd/mm/aaaa";
+        }
+
+        if (!$this->password) {
+            $errors['password'] = "Senha $padrao";
+        }
+
+        if (!$this->confirm_password) {
+            $errors['confirm_password'] = "Confirmação de senha $padrao";
+        }
+
+        if ($this->password && $this->confirm_password
+            && $this->password !== $this->confirm_password){
+            $errors['confirm_password'] = "As senhas não são iguais";
+            $errors['password'] = "As senhas não são iguais";
+        }
+
+        if (count($errors) > 0) {
+            throw new ValidationException($errors);
+        }
+
+    }
+
+    
 }
