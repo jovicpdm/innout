@@ -11,17 +11,17 @@ class Model{
 
     public function loadFromArray($arr, $sanitize = true){
         if ($arr) {
-            $conn = Database::getConnection();
+//            $conn = Database::getConnection();
             foreach ($arr as $key => $value) {
-                $cleanValue = strip_tags(trim($cleanValue));
+                $cleanValue = $value;
                 if ($sanitize && isset($cleanValue)){
-                    $cleanValue = $value;
+                    $cleanValue = strip_tags(trim($cleanValue));
                     $cleanValue = htmlentities($cleanValue, ENT_NOQUOTES);
-                    $cleanValue =mysqli_real_escape_string($conn, $cleanValue);
+//                    $cleanValue =mysqli_real_escape_string($conn, $cleanValue);
                 }
                 $this->$key = $cleanValue;
             }
-            $conn->close();
+//            $conn->close();
         }
     }
 
@@ -31,6 +31,10 @@ class Model{
 
     public function __set($key, $value){
         $this->values[$key] = $value;
+    }
+
+    public function getValues(){
+        return $this->values;
     }
 
     public static function getOne($filters = [], $colums = '*'){

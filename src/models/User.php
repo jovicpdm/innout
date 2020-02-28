@@ -22,6 +22,14 @@ class User extends Model {
         parent::insert();
     }
 
+    public function update(){
+        $this->validate();
+        $this->is_admin = $this->is_admin ? 1 : 0;
+        if (!$this->end_date) $this->end_date = null;
+        $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+        parent::update();
+    }
+
     private function validate() {
         $errors = [];
         $padrao = "é um campo obrigatório";
